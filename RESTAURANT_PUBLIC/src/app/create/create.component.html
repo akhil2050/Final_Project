@@ -1,0 +1,24 @@
+<p>create works!</p>
+
+<div class="fullwrap">
+    <form (ngSubmit)="createNewChef(newChef)" action="http://localhost:3000/api/chefs" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input [(ngModel)]="newChef.name" class="form-control" id="name" name="name" required="required">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input [(ngModel)]="newChef.description" class="form-control" id="description" name="description" required="required">
+        </div>
+        <div class="form-group">
+            <label for="imgURL">Image Path</label>
+            <input [(ngModel)]="newChef.imgUrl" class="form-control" id="imgURL" name="imgURL">
+        </div>        
+        <div class="submit">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+    
+    

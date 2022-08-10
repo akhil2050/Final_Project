@@ -1,0 +1,70 @@
+<main>
+         
+    <h2>Locate Our Stores</h2>
+    <button class="btn btn-secondary addStore" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+    <div class="mt-stores">
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+<tbody *ngFor="let location of loc">
+                    <td>{{location.branch}}</td>
+                    <td>{{location.address}}</td>
+                    <td>{{location.city}}</td>
+                    <td>{{location.phone}}</td>
+                    <td>{{location.email}}</td>
+                <tr>
+                </tr>                      
+            </tbody>
+        </table>
+    </div>
+  <h3>Order Now <a href="tel:+1 1234 56789" >+1 1234 56789</a></h3>
+    
+</main>
+
+<!-- Modal for new locator Form-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new Store</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="createLocator(newLocator)" action="http://localhost:3000/api/locator" method="POST">
+                    <div class="form-group">
+                        <label for="branch">Branch Name</label>
+                        <input [(ngModel)]="newLocator.branch" class="form-control" id="branch" name="branch" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input [(ngModel)]="newLocator.address" class="form-control" id="address" name="address" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input [(ngModel)]="newLocator.city" class="form-control" id="city" name="city" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input [(ngModel)]="newLocator.phone" class="form-control" id="phone" name="phone" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="newLocator.email" class="form-control" id="email" name="email" required="required">
+                    </div>
+                    <div class="submit">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>   
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,105 @@
+<main>
+    <div class="recipe banner">
+        <h1>Discover recipes everyday</h1>
+        <p>We deliver the fastest way! It does not matter where you are. </p>
+    </div>
+    
+    <h2>Our Recipes</h2>
+    <p class="addRecipe">
+        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+    </p>
+    
+
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let recip of rec">
+                <div class="card" style="width: 18rem;">       
+                    <img src="assets/images/special-4.jpg" class="card-img-top" alt=" recipe image">
+                    <div class="card-body">
+                    <h5 class="card-title">{{recip.title}}</h5>
+                    <p class="card-text">{{recip.title}} is a delicious {{recip.type}} food,which takes only {{recip.cookingTime}} for preparation.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showModal" (click) ="onClick(recip)" >Show Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h3>Order Now <a href="tel:+1 1234 56789" >+1 1234 56789</a></h3>
+    
+    </div>
+    
+</main>
+
+
+<!-- Modal for new recipe Form-->
+<div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="showModalLabel">{{newRecipe.title}}</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Ingredients:{{newRecipe.ingredients}}</li><br>
+                <li>Type:{{newRecipe.type}}</li><br>
+                <li>Cooking Time:{{newRecipe.cookingTime}}</li><br>
+                <li>Description:{{newRecipe.description}}</li><br>
+                <li>Ingredienyts:{{newRecipe.ingredients}}</li>
+    
+    
+            </ul>
+        </div>   
+    </div>
+    </div>
+</div>
+
+
+<!-- Modal for new recipe Form-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new Recipe</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <form (ngSubmit)="createRecipe(newRecipe)" action="http://localhost:3000/api/recipes" method="POST">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input [(ngModel)]="newRecipe.title" class="form-control" id="title" name="title" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="ingredients">Ingredients</label>
+                    <input [(ngModel)]="newRecipe.ingredients" class="form-control" id="ingredients" name="ingredients" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <input [(ngModel)]="newRecipe.type" class="form-control" id="type" name="type" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="cookingTime">Cooking Time</label>
+                    <input [(ngModel)]="newRecipe.cookingTime" class="form-control" id="cookingTime" name="cookingTime" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input [(ngModel)]="newRecipe.description" class="form-control" id="description" name="description" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="imgUrl">Image path</label>
+                    <input [(ngModel)]="newRecipe.imgUrl" class="form-control" id="imgUrl" name="imgUrl">
+                </div>
+                <div class="submit">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>   
+    </div>
+    </div>
+</div>
+

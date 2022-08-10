@@ -1,0 +1,19 @@
+<header>
+    <a class="logo" routerLink=""><img src="assets/images/logo.png" width="150" height="97" alt="Burger logo"></a>
+    <nav>
+        <ul>
+            <li><a routerLink="" [routerLinkActive]="['isActive']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="menu" [routerLinkActive]="['isActive']" [routerLinkActiveOptions]="{exact: true}">Menu</a></li>
+            <li><a routerLink="recipe" [routerLinkActive]="['isActive']">Recipe Corner</a></li>
+            <li><a routerLink="store-locator" [routerLinkActive]="['isActive']">Store Locator</a></li>
+        </ul>
+    </nav>
+</header> 
+<router-outlet></router-outlet>
+<footer>
+    <h5>Contact Us</h5> 
+    <p>53 E 116th St, <br>New York, NY 10029, <br>United States</p>
+    <a href="mailto:mealtime@mt.com">mealtime@mt.com</a><br>
+    <a href="tel:+1 1234 56789" >+1 1234 56789</a><br>
+    <small>Copyright © 2021 Mealtime Cafe </small>        
+</footer>

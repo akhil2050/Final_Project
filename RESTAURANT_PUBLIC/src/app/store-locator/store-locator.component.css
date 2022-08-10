@@ -1,0 +1,9 @@
+.addStore{
+    float:right;
+    margin:10px;
+    width:10%;
+}
+
+.sortLink {
+    cursor: pointer;
+}

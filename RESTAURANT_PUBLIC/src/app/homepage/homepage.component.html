@@ -1,0 +1,37 @@
+<main>
+    <div class="banner">
+        <h1>The Best, Juiciest Chicken Burgers</h1>
+        <p>We delivering the fastest way! It does not matter where you are. </p>
+    </div>
+    
+    <h2>MealTime Specials</h2>
+    <div class="mt-specials">
+        <section *ngFor="let food of foods| slice:0:4 ">
+            <img src="assets/images/special-1.jpg" alt="Special meal">
+            <h4>{{food.name}} <span>${{food.total}}</span></h4>
+            <p>{{food.type}}</p>
+        </section> 
+      
+    </div>
+    <div class="mt-abt">
+        <section>
+            <img src="assets/images/about.jpg" alt="About melatime">
+        </section>
+        <section>
+            <h2>Who we are</h2>
+            <p>Donec viverra dolor ut mauris laoreet, ac molestie mi porta. Etiam a tincidunt quam, sed maximus urna. Pellentesque pharetra urna lacus, non venenatis mi sagittis at. Nunc convallis mauris nec lectus lacinia, ac consectetur turpis auctor. Donec lobortis eros tempor nisi maximus dictum ut a sapien. Ut at ipsum congue, ornare augue ut, auctor sapien. Nulla efficitur sapien at lobortis facilisis. Sed vulputate arcu vitae accumsan gravida. Ut non libero non dui scelerisque tincidunt.</p>
+        </section>
+    </div>
+    <div class="mt-chefs">
+        <h2>Our Chefs</h2>
+        <ul>
+            <li *ngFor="let chef of chefs">
+                <img src="assets/images/team-1.jpg" alt="Our chefs">
+                <h4>{{chef.name}}</h4>
+                <p>{{chef.name}}</p>
+            </li>           
+           
+        </ul>
+    </div>
+    
+</main>

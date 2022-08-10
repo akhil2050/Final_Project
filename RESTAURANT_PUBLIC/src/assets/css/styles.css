@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+}
+body 
+{
+    color: #000;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/body-bg.png);
+    background-color: #1d0c30 !important;  
+    background-repeat: repeat;
+}
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+  
+}
+.logo 
+{
+    float: left;
+    width: 20%;
+}
+nav 
+{
+    float: left;
+    width: 80%;
+}
+nav ul 
+{
+   padding: 0;
+   float: right;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline;
+    padding: 0px 15px;
+}
+nav ul li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Merienda One', cursive;
+}
+ nav ul li a.isActive,  nav ul li a:hover
+{
+    color: #ffc600; 
+}
+h1 
+{
+    font-size: 3.2em;
+    color: #ffc600;
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+    font-weight: 400;
+    z-index: 9;
+    margin: 0;
+    text-shadow: 2px 3px #fff;
+}
+h2 {
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Merienda One', cursive;
+    margin-top: 75px !important;
+    margin-bottom: 50px !important;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+h2::before
+{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100px;
+    height: 2px;
+    background-color: #ffc600;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+p {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 26px;
+}
+
+main 
+{ 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px 20px;
+}
+.banner
+{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    border: 2px solid #fff;
+    padding: 20px;
+}
+.banner::before {
+    content: "";
+    background-color: #1d0c30;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.banner p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    z-index: 9;    
+}
+.mt-specials
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.mt-specials section {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 25%;
+}
+.mt-specials section img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.mt-specials h4
+{
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-family: 'Merienda One', cursive;
+}
+.mt-specials h4 span
+{
+    font-size: 1.5em;
+    color: #ffc600;
+    font-weight: 400;
+    font-family: 'Merienda One', cursive;
+    float: right;
+}
+.mt-chefs ul 
+{
+    padding: 0;
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.mt-chefs ul li
+{
+    list-style: none;
+    display: inline;
+    width: 20%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.mt-chefs ul li img
+{
+    width: 100%;
+}
+.mt-chefs h4 {
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Merienda One', cursive;
+    text-align: center;
+}
+.mt-chefs p {
+    font-size: 14px;
+    color: #fff; 
+    text-align: center; 
+    margin: 0;
+}
+.mt-abt p {
+    font-size: 16px;
+    color: #000; 
+    text-align: center; 
+}
+.mt-abt img {
+   width: 100%;
+}
+.mt-abt h2 {
+    color: #1d0c30;
+    margin-top: 0;
+}
+.mt-abt
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background: #fff;
+    margin: 40px 0 30px;
+    position: relative;
+}
+.mt-abt section
+{
+    margin: 20px;
+    width: 50%;
+}
+.mt-abt::after {
+    background: transparent url(../images/arrow-bottom-white.png) repeat-x;
+    bottom: -7px;
+    content: "";
+    height: 7px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+}
+.mt-abt::before {
+    background: transparent url(../images/arrow-bottom-white.png) repeat-x;
+    top: -7px;
+    content: "";
+    height: 7px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    transform: rotate(180deg);
+}
+footer 
+{
+    max-width: 1200px;
+    margin: 0 auto;    
+    padding: 15px;
+    text-align: center;   
+    border-top: 1px dashed #fff;
+}
+footer h5
+{
+    font-size: 20px;
+    margin: 0;
+    color: #fff;
+}
+footer a
+{
+    font-size: 14px;
+    font-style: italic;
+    color: #ffc600;
+}
+footer small {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 20px;
+    display: block;
+}
+
+/**** menu ***/
+
+.menu.banner
+{
+     height: 400px;
+     background-image: url(../images/banner-menu.jpg);
+}
+.menu.banner::before {
+    opacity: 0.5;
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+}
+th 
+{
+    background: #ffc600;
+    color: #1d0c30;
+    font-weight: bold;
+    border: 1px solid #ffc600;
+    text-align: left;
+    padding: 18px 10px;
+
+}
+td 
+{
+    padding: 18px 10px;
+    border: 1px dashed #ffc600;
+    text-align: left;
+    color: #fff;
+}
+h3 
+{
+    font-size: 30px;
+    color: #ffc600; 
+    text-align: center; 
+}
+h3 a
+{
+    font-size: 30px;
+    color: #fff; 
+    text-align: center; 
+    text-decoration: none;
+}
+
+/**** recipe ***/
+
+.recipe.banner
+{
+     height: 400px;
+     background-image: url(../images/banner-recipe.jpg);
+}
+
+.mt-recp
+{
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.mt-recp ul
+{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mt-recp ul li
+{
+    width: 50%;
+    list-style: none;
+    padding: 30px;
+}
+.mt-recp ul li h4
+{
+    font-size: 30px;
+    color: #ffc600; 
+    margin: 5px 0;
+}
+.mt-recp ul li img
+{
+    width: 70%;
+}
+
+
+@media only screen and (max-width: 767px),
+(min-device-width: 768px) and (max-device-width: 1024px)
+{
+    .banner {
+        height: 450px;
+    }
+    .mt-specials {
+        flex-wrap: wrap;
+    }
+    .mt-specials section {
+        width: 50%;
+    }
+   
+    table, thead, tbody, th, td, tr {
+        display: block;
+        }
+        
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {     margin-bottom: 8px; }
+        td {        
+            border: none;
+            border: 1px dashed #ffc600;
+            position: relative;
+            padding-left: 50%;
+        }
+        td:before {
+            position: absolute;
+            left: 0px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            top: 0;
+            height: 100%;
+            padding: 18px 10px;
+            box-sizing: border-box;
+        }  
+        .mt-mnu td:nth-of-type(1):before { content: "Type"; background-color: #ffc600;color: #1d0c30;font-weight: bold;}
+        .mt-mnu td:nth-of-type(2):before { content: "Item Name"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-mnu td:nth-of-type(3):before { content: "Quantity"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-mnu td:nth-of-type(4):before { content: "Discount"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-mnu td:nth-of-type(5):before { content: "Total"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+      
+        
+        .mt-stores td:nth-of-type(1):before { content: "Branch"; background-color: #ffc600;color: #1d0c30;font-weight: bold;}
+        .mt-stores td:nth-of-type(2):before { content: "Address"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-stores td:nth-of-type(3):before { content: "City"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-stores td:nth-of-type(4):before { content: "Phone"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+        .mt-stores td:nth-of-type(5):before { content: "Email"; background-color: #ffc600;color: #1d0c30;font-weight: bold; }
+
+        .mt-stores td:before {            
+            width: 30%;           
+        }
+        .mt-stores td {
+            padding-left: 35%;
+            word-break: break-all;
+        }
+}
+
+@media only screen and (max-width: 767px) 
+{
+    .banner {
+        height: 400px;
+    }
+    h1 {
+        font-size: 2.2em;
+        text-shadow: 1px 2px #fff;
+    }
+    .logo {
+        width: 100%;
+    }
+    nav ul {
+        float: left;
+        text-align: right;
+        display: block;
+    }
+    nav, .logo {
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        padding: 3px 10px;
+        width: 100%;
+        float: left;
+    }
+    header {
+        padding: 15px;
+    }
+    .mt-specials {
+        flex-direction: column;
+    }
+    .mt-specials section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .mt-abt {
+        flex-direction: column;
+    }
+    .mt-abt section {
+        width: 100%;
+    }
+    .mt-chefs ul {
+        flex-direction: column;
+    }
+    .mt-chefs ul li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .mt-recp ul li {
+        width: 100%;
+    }
+    h3 a {
+        display: block;
+    }
+}
